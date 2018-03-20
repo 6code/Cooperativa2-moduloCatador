@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'org.jetbrains:annotations-java5:15.0'
+    //listview horizontal
+    compile 'it.sephiroth.android.library.horizontallistview:hlistview:1.2.2'
 }
