@@ -2,11 +2,9 @@ package com.tucurui.laboratorio.cooperativa2.fragment;
 
 
 import android.content.Context;
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,10 +35,7 @@ public class FragmentEstoque extends Fragment {
         View v = inflater.inflate(R.layout.fragment_estoque, container, false);
 
 
-        HListView hListView = (HListView) v.findViewById(R.id.hlist);
-
-
-        ListView listView = (ListView) v.findViewById(R.id.id_listEstoque);
+        ListView listView = (ListView) v.findViewById(R.id.id_Historico_de_Estoque);
 
         List<String>list = new ArrayList<>();
         list.add("Ferro: 24kg");
@@ -51,24 +46,10 @@ public class FragmentEstoque extends Fragment {
         list.add("Cobre: 2kg");
         list.add("Zinco: 1kg");
 
-        List<String> list2 = new ArrayList<>();
-        list2.add("Ferro: 1kg - Data: 10/05/2018");
-        list2.add("Aluminio: 15kg - Data: 10/05/2018");
-        list2.add("Zinco: 16kg - Data: 10/05/2018");
-        list2.add("Cobre: 17kg - Data: 10/05/2018");
-        list2.add("Papelaão: 1kg - Data: 10/05/2018");
-        list2.add("Vidro: 5kg - Data: 10/05/2018");
-        list2.add("Cobre: 4kg - Data: 10/05/2018");
-        list2.add("Ferro: 3kg - Data: 10/05/2018");
-        list2.add("Zinco: 11kg - Data: 10/05/20180");
-        list2.add("Ferro: 12kg - Data: 10/05/2018");
-        list2.add("Ferro: 1kg - Data: 10/05/2018");
-        list2.add("Ferro: 10kg - Data: 10/05/2018");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, R.layout.support_simple_spinner_dropdown_item, list);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(context, R.layout.support_simple_spinner_dropdown_item, list2);
-        listView.setAdapter(adapter2);
-        hListView.setAdapter(adapter);
+        listView.setAdapter(adapter);
+
 
 
         return v;
