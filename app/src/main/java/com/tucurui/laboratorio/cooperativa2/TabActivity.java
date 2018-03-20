@@ -7,10 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.tucurui.laboratorio.cooperativa2.fragment.FragmentEntrega;
-import com.tucurui.laboratorio.cooperativa2.fragment.FragmentVenda;
 import com.tucurui.laboratorio.cooperativa2.fragment.FragmentPagamento;
-import com.tucurui.laboratorio.cooperativa2.fragment.FragmentEstoque;
 import com.tucurui.laboratorio.cooperativa2.fragment.FragmentPageAdapter;
+import com.tucurui.laboratorio.cooperativa2.fragment.FragmentVenda;
 
 
 public class TabActivity extends AppCompatActivity {
@@ -23,7 +22,6 @@ public class TabActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
 
-
         //recupero pelo id
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.view_pager);
@@ -32,20 +30,15 @@ public class TabActivity extends AppCompatActivity {
 
         //adiciono meu fragments no adpter
         adapter.addFragment(new FragmentEntrega(), "Entrega");
-        adapter.addFragment(new FragmentEstoque(), "Estoque");
         adapter.addFragment(new FragmentVenda(), "Venda");
         adapter.addFragment(new FragmentPagamento(), "Pagamento");
-
 
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
         mTabLayout.getTabAt(0).setIcon(R.drawable.estoque);
-        mTabLayout.getTabAt(1).setIcon(R.drawable.histrico_estoque);
-        mTabLayout.getTabAt(2).setIcon(R.drawable.a);
-        mTabLayout.getTabAt(3).setIcon(R.drawable.money);
-
-
+        mTabLayout.getTabAt(1).setIcon(R.drawable.a);
+        mTabLayout.getTabAt(2).setIcon(R.drawable.money);
 
     }
 

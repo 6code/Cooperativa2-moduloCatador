@@ -32,7 +32,7 @@ public class FragmentPagamento extends Fragment {
         View v = inflater.inflate(R.layout.fragment_pagamento, container, false);
 
 
-        ListView listView = (ListView) v.findViewById(R.id.id_listPagamento);
+        ListView listView = v.findViewById(R.id.id_listPagamento);
 
         List<String> list = new ArrayList<>();
         list.add("Data: 10/05/2018 - Hora: 10:12 - R$: 20,00");

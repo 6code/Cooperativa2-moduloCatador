@@ -33,7 +33,7 @@ public class FragmentVenda extends Fragment {
         View v = inflater.inflate(R.layout.fragment_venda, container, false);
 
 
-        ListView listView = (ListView) v.findViewById(R.id.id_listVenda);
+        ListView listView = v.findViewById(R.id.id_listVenda);
 
         List<String> list = new ArrayList<>();
         list.add("Ferro: 1kg - Data: 10/05/2018 - R$: 2,00");
