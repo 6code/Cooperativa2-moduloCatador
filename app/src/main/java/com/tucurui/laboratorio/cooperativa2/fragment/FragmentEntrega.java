@@ -36,7 +36,7 @@ public class FragmentEntrega extends Fragment {
         View v = inflater.inflate(R.layout.fragment_entrega, container, false);
 
 
-        ListView listView = v.findViewById(R.id.id_list_entrega);
+        ListView listView = v.findViewById(R.id.s);
 
         List<String> list2 = new ArrayList<>();
         list2.add("Ferro: 1kg - Data: 10/05/2018");
